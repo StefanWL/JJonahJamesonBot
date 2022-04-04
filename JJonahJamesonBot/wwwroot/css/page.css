@@ -1,0 +1,94 @@
+﻿body {
+    background-color: rgb(255,246,228);
+    font-family: 'Comic Neue', sans-serif
+}
+
+#the-man {
+    width: 100%
+}
+
+#arrow {
+    width: 100%
+}
+
+#give-button {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    font-weight: 700;
+    font-size: 2em;
+    border: none;
+    border-radius: 3em;
+    transition: background-color 0.15s;
+}
+
+#give-button:hover {
+    background-color: dimgray;
+}
+
+#give-button:active {
+    background-color: darkgray;
+}
+
+#button-row {
+    display:inline;
+}
+
+#load-spinner {
+    display:none;
+    width:12%;
+}
+
+#file-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+#spacer {
+    margin-top: 100%;
+}
+
+#file-upload {
+    display: none;
+}
+
+#file-upload-label {
+    position: absolute;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 2px black;
+    border-radius: 1em;
+    font-size: 5em;
+    font-family: 'Lato';
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    padding-top: 30%;
+    cursor: pointer;
+    transition: color 0.2s, border 0.2s;
+}
+
+#file-upload-label:hover {
+    border: solid 2px dimgray;
+    color: dimgray;
+}
+
+#file-upload-label:active {
+    border: solid 2px darkgray;
+    color: darkgray;
+}
+
+#response-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

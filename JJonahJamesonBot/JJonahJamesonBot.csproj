@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-JJonahJamesonBot-490B0040-F420-47C7-B2FB-9CFFFEA3D907</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="3.1.23" />
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.23" />
+    <PackageReference Include="Microsoft.Extensions.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.TensorFlow.Redist" Version="0.14.0" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.7.1" />
+    <PackageReference Include="jQuery" Version="3.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.ML" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="MLModels\" />
+    <None Remove="DataModels\" />
+    <None Remove="Microsoft.Extensions.ML" />
+    <None Remove="Microsoft.ML.TensorFlow.Redist" />
+    <None Remove="Microsoft.ML.Vision" />
+    <None Remove="Microsoft.ML.ImageAnalytics" />
+    <None Remove="Views\" />
+    <None Remove="bootstrap" />
+    <None Remove="jQuery" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MLModels\" />
+    <Folder Include="DataModels\" />
+    <Folder Include="Pages\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\css\site.css" />
+    <Content Remove="wwwroot\js\jquery.js" />
+    <Content Remove="wwwroot\js\site.js" />
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\js\jquery_copy.js" />
+    <None Include="wwwroot\js\app.js" />
+  </ItemGroup>
+</Project>

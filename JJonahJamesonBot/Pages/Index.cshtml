@@ -1,0 +1,44 @@
+﻿@page
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JJonahJamesonBot</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&family=Lato:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="row justify-content-around">
+        <div class="col-10 col-md-4">
+            <form class="pt-5 pl-5 ml-5">
+                <div id="file-container">
+                    <div id="spacer"></div>
+                    <label id="file-upload-label" for="file-upload">
+                        +
+                        <input type="file" id="file-upload" name="file-upload" accept=".jpg,.jpeg,.png" />
+                    </label>
+                </div>
+            </form>
+            <img class="pl-5 ml-5" id="arrow" src="~/images/arrow.png" />
+            <div id="image-container"></div>
+        </div>
+        <div class="col-10 col-md-7">
+            <img class="ml-5 mr-5 mb-5 p-5" id="the-man" src="~/images/the-man.gif" />
+            <div id="button-row">
+                <button id="give-button">GIVE HIM PICTURES OF SPIDERMAN!</button>
+                <img class="ml-5" id="load-spinner" src="~/images/loading.gif" />
+            </div>
+        </div>
+    </div>
+    <script src="~/js/jquery_copy.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/app.js" asp-append-version="true"></script>
+</body>
+</html>
