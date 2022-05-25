@@ -10,10 +10,11 @@
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.23" />
     <PackageReference Include="Microsoft.Extensions.ML" Version="1.7.1" />
-    <PackageReference Include="Microsoft.ML.TensorFlow.Redist" Version="0.14.0" />
     <PackageReference Include="Microsoft.ML.Vision" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.7.1" />
     <PackageReference Include="jQuery" Version="3.6.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.7.0" />
+    <PackageReference Include="Microsoft.ML.TensorFlow.Redist" Version="0.14.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
     <None Remove="Views\" />
     <None Remove="bootstrap" />
     <None Remove="jQuery" />
+    <None Remove="SciSharp.TensorFlow.Redist" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MLModels\" />
@@ -47,5 +49,10 @@
     <None Include="wwwroot\css\site.css" />
     <None Include="wwwroot\js\jquery_copy.js" />
     <None Include="wwwroot\js\app.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="MLModels\model.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

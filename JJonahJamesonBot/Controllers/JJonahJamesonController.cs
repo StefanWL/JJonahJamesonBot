@@ -27,9 +27,11 @@ namespace JJonahJamesonBot.Controllers
             ModelInput input = new ModelInput();
             input.Image = image;
 
-            ModelOutput prediction = _predictionEnginePool.Predict(modelName: "JJonahJamesonModel", example: input);
+            //ModelOutput prediction = _predictionEnginePool.Predict(modelName: "JJonahJamesonModel", example: input);
 
-            string classification = prediction.PredictedLabel;
+            //string classification = prediction.PredictedLabel;
+
+            string classification = "spiderman";
 
             return classification;
         }
@@ -41,9 +43,17 @@ namespace JJonahJamesonBot.Controllers
             ModelInput input = new ModelInput();
             input.Image = imageBytes;
 
-            ModelOutput prediction = _predictionEnginePool.Predict(modelName: "JJonahJamesonModel", example: input);
+            string classification;
+            try
+            {
+                ModelOutput prediction = _predictionEnginePool.Predict(modelName: "JJonahJamesonModel", example: input);
 
-            string classification = prediction.PredictedLabel;
+                classification = prediction.PredictedLabel;
+            }
+            catch (Exception ex)
+            {
+                classification = $"Source: {ex.Source} Name: {ex.GetType().Name} Message: {ex.Message} Inner Exception: {ex.InnerException}";
+            }
 
             return Ok(classification);
         }

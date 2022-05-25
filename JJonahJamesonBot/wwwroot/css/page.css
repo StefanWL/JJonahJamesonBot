@@ -1,10 +1,11 @@
 ﻿body {
-    background-color: rgb(255,246,228);
+    background-color: rgb(215,244,251);
     font-family: 'Comic Neue', sans-serif
 }
 
 #the-man {
-    width: 100%
+    width: 100%;
+    border-radius: 2em;
 }
 
 #arrow {
@@ -12,22 +13,21 @@
 }
 
 #give-button {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: rgb(28, 43, 98);
     padding: 1em;
     font-weight: 700;
     font-size: 2em;
-    border: none;
+    border: solid 2px rgb(28, 43, 98);
     border-radius: 3em;
-    transition: background-color 0.15s;
+    outline: none;
+    transition: background-color 0.15s, color 0.15s, border 0.15s;
 }
 
 #give-button:hover {
-    background-color: dimgray;
-}
-
-#give-button:active {
-    background-color: darkgray;
+    background-color: rgb(250,238,237);
+    border: solid 2px rgb(183,53,41);
+    color: rgb(183,53,41);
 }
 
 #button-row {
@@ -36,7 +36,7 @@
 
 #load-spinner {
     display:none;
-    width:12%;
+    width:25%;
 }
 
 #file-container {
@@ -63,32 +63,20 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border: solid 2px black;
-    border-radius: 1em;
+    border: solid 2px rgb(28, 43, 98);
+    border-radius: 0.75em;
     font-size: 5em;
     font-family: 'Lato';
     font-weight: 900;
-    color: black;
+    color: rgb(28, 43, 98);
     text-align: center;
     padding-top: 30%;
     cursor: pointer;
-    transition: color 0.2s, border 0.2s;
+    transition: color 0.2s, border 0.2s, background-color 0.2s;
 }
 
 #file-upload-label:hover {
-    border: solid 2px dimgray;
-    color: dimgray;
-}
-
-#file-upload-label:active {
-    border: solid 2px darkgray;
-    color: darkgray;
-}
-
-#response-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-color: rgb(250,238,237);
+    border: solid 2px rgb(183,53,41);
+    color: rgb(183,53,41);
 }

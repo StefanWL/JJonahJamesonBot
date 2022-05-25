@@ -2,6 +2,7 @@
 
 const fileInput = document.getElementById('file-upload');
 const imageContainer = document.getElementById('file-upload-label');
+const fileInputText = document.getElementById('file-upload-text');
 
 fileInput.onchange = () => {
     const file = fileInput.files[0];
@@ -9,12 +10,12 @@ fileInput.onchange = () => {
 
     fileURL = window.URL.createObjectURL(file);
 
-    imageContainer.innerHTML = "";
+    fileInputText.innerHTML = '';
     imageContainer.style.backgroundImage = `url(${fileURL})`;
 }
 
 submitBtn.onclick = () => {
-    const body = document.getElementsByTagName('body')[0];
+    const theMan = document.getElementById('the-man-container');
     const loadSpinner = document.getElementById('load-spinner');
     const file = fileInput.files[0];
 
@@ -24,10 +25,11 @@ submitBtn.onclick = () => {
     reader.onload = () => {
         $.post("api/JJonahJameson", { imageBase64: reader.result.split(',')[1] }, (data) => {
             if (data == "spiderman") {
-                body.innerHTML = '<iframe id="response-video" src="https://www.youtube.com/embed/b5G9reMt5FE?start=87&end=97&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                theMan.innerHTML = '<iframe id="the-man" style="height:432px;" class="mb-4" src="https://www.youtube.com/embed/b5G9reMt5FE?start=87&end=97&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             } else {
-                body.innerHTML = '<iframe id="response-video" src="https://www.youtube.com/embed/b5G9reMt5FE?start=98&end=117&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                theMan.innerHTML = '<iframe id="the-man" style="height:432px;" class="mb-4" src="https://www.youtube.com/embed/b5G9reMt5FE?start=98&end=104&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
+            loadSpinner.style.display = "none";
         })
     }
 
